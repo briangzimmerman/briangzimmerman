@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/css/main.css'>
+    <link rel='stylesheet' href='/css/index.css'>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class='hamburger'>
+            <div class='hamburger1'></div>
+            <div class='hamburger2'></div>
+            <div class='hamburger3'></div>
+        </div>
+
+        <div class='overlay'></div>
+
+        <div class='slide-in'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" id='close'>
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+        </div>
+    </header>
+
+    <div class='parallax' id='parallax1'>
+        <div class='caption'>
+            <p id='name'>Brian Zimmerman</p>
+            <p id='title'>Web Developer</p>
+        </div>
+    </div>
+
+    <div id='about_me' class='section'>
+        <div class='section-content'>
+            <div id='headshot'>
+                <img src='/images/me.jpg'>
+            </div>
+            <div id='text-about'>
+                <p class='section-title'>About Me</p>
+                My name is Brian Zimmerman and I'm a Chicago based web developer.
+                <br>
+                I enjoy making good looking sites that are clean and easy to maintain
+                and just like grandma's cookies,
+                <!-- <br> -->
+                the secret ingredient in all of my sites is love.
+                <br><br>
+                I moved to Chicago in the fall of 2016.  I'm orginally from Maryland
+                and graduated from The Universiry of Maryland.
+            </div>
+        </div>
+    </div>
+
+    <div id='resume' class='section'>
+        <div class='section-content'>
+            <p class='section-title'>Experience</p>
+            <div id='jobs'>
+                <div class='job'>
+                    <p class='job-dates'>Since Oct 2017</p>
+                    <div class='company'>
+                        <span class='job-title'>Software Engineer</span>
+                        <a class='company-website' target='_blank' 
+                        href='https://www.highlandventuresltd.com/'>
+                            Highland Ventures LTD
+                        </a>
+                    </div>
+                    <div class='job-description'>
+                        Highland Ventures LTD owns/partners with several companies,
+                        such as Family Video, Marco's Pizza, StayFit24, Total Wireless,
+                        and several others. My job is to make other people's jobs
+                        easier through coding.  I've made scripts that populate
+                        financial reports, a real-time phone monitor for the pizza
+                        stores, a site to keep track off all the companies' bills,
+                        the POS system for StayFit24, and much more.
+                    </div>
+                </div>
+                <div class='job'>
+                    <p class='job-dates'>Aug 2013 - Aug 2016</p>
+                    <div class='company'>
+                        <span class='job-title'>IT Support</span>
+                        <a class='company-website' target='_blank'
+                        href='https://jifsan.umd.edu'>
+                            JIFSAN
+                        </a>
+                    </div>
+                    <div class='job-description'>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='/js/jquery-3.3.1.min.js'></script>
+    <script src='/js/index.js'></script>
+</body>
+</html>
