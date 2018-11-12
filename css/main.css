@@ -18,8 +18,15 @@
     position: fixed;
     top: 10px;
     left: 10px;
-    width: 35px;
+    /* width: 35px; */
     z-index: 100;
+
+    width: 51px;
+    height: 51px;
+    background-color: #151f2c;
+    box-shadow: 0 0 5px #333;
+    padding: 6px 8px;
+    border-radius: 3px;
 }
 
 .hamburger div {

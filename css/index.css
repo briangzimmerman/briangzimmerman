@@ -10,7 +10,8 @@
     position: fixed;
     z-index: 100;
     width: 100vw;
-    display: flex;
+    display: none;
+    /* display: flex; */
     justify-content: center;
     background-color: #151F2C;
     height: 50px;
@@ -197,6 +198,16 @@
 .contact-methods {
     display: flex;
     justify-content: center;
+}
+
+@media screen and (min-width: 560px) {
+    .hamburger, .overlay.show, .slide-in {
+        display: none;
+    }
+
+    #expanded {
+        display: flex;
+    }
 }
 
 @media screen and (max-width: 705px) {
