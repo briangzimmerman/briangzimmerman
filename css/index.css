@@ -58,6 +58,28 @@
     background-size: cover;
 }
 
+#menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+#menu span {
+    margin: 7px 10px;
+    padding: 3px 0;
+}
+
+#menu span span {
+    color: black;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+}
+
+#menu span.current span {
+    border-color: black;
+}
+
 #expanded {
     position: fixed;
     z-index: 100;
