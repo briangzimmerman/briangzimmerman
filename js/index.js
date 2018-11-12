@@ -54,8 +54,8 @@ function setCurrentLink() {
         var height = $elem.height();
         var top = positions[id];
 
-        if($(window).scrollTop() >= last_top + (last_height / 2)
-            && $(window).scrollTop() < top + (height / 2)
+        if($(window).scrollTop() >= last_top + (last_height - ($(window).height() / 2))
+            && $(window).scrollTop() < top + (height - ($(window).height() / 2))
         ) {
             $('.section-link.current').removeClass('current');
             $('#expanded span[data-target="'+id+'"]').addClass('current');
