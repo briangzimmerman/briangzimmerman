@@ -28,7 +28,7 @@ $('.section-link').click(function() {
     $('html, body').animate({scrollTop: (positions[id] - 50)+'px'});
 });
 
-$('#menu span').click(function() {
+$('.slide-in-link').click(function() {
     toggleSlideIn();
     var id = $(this).data('target');
     $('html, body').animate({scrollTop: (positions[id] - 50)+'px'});
@@ -64,7 +64,7 @@ function setCurrentLink() {
             && $(window).scrollTop() < top + (height - ($(window).height() / 2))
         ) {
             $('.section-link.current, #menu span.current').removeClass('current');
-            $('#expanded span[data-target="'+id+'"], #menu span[data-target="'+id+'"]').addClass('current');
+            $('#expanded span[data-target="'+id+'"], .slide-in-link[data-target="'+id+'"]').addClass('current');
             $title.text(titles[id]);
         }
 
