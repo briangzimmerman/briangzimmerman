@@ -1,3 +1,55 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato/Lato-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato';
+    font-size: 18px;
+    color: white;
+    font-weight: 300;
+    flex-shrink: 0;
+}
+
+.hamburger {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    /* width: 35px; */
+    z-index: 100;
+
+    width: 51px;
+    height: 51px;
+    background-color: #151f2c;
+    box-shadow: 0 0 5px #333;
+    padding: 6px 8px;
+    border-radius: 3px;
+}
+
+.hamburger div {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    border-radius: 6px;
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+  }
+
 .parallax {
     position: relative;
     background-attachment: fixed;
