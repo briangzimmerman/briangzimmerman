@@ -6,6 +6,41 @@
     background-size: cover;
 }
 
+#expanded {
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: #151F2C;
+    height: 50px;
+    align-items: center;
+    box-shadow: 0 5px 5px -5px #333;
+}
+
+.section-link {
+    text-transform: uppercase;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    padding: 3px 15px;
+    font-size: 93%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.section-link.current {
+    border-color: white;
+}
+
+.section-link:hover {
+    cursor: pointer;
+}
+
+.section-link:not(.current):hover {
+    color: #d9ecea;
+    border-color: #d9ecea;
+}
+
 #parallax1 {
     background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('/images/highway.jpg');
     height: 100vh;
@@ -91,6 +126,12 @@
     margin-bottom: 10px;
 }
 
+.section-content {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #about_me .section-content {
     display: flex;
     justify-content: space-between;
@@ -98,7 +139,7 @@
 }
 
 #about_me #text-about {
-    width: 50%;
+    width: 55%;
     text-align: left;
     margin-top: auto;
     margin-bottom: auto;
@@ -132,9 +173,11 @@
 }
 
 .job-description {
-    font-size: 93%;
+    font-size: 90%;
     margin-top: 5px;
     text-align: left;
+    line-height: 1.5em;
+    text-rendering: optimizeLegibility;
 }
 
 .company {
@@ -149,6 +192,11 @@
 
 .job-dates {
     font-size: 75%;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: center;
 }
 
 @media screen and (max-width: 705px) {
