@@ -52,10 +52,6 @@
 
 .parallax {
     position: relative;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 #menu {
@@ -117,7 +113,9 @@
 }
 
 #parallax1 {
-    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('/images/highway.jpg');
+    background-image:
+        linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
+        url('/images/highway.jpg');
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -243,7 +241,7 @@
     border-bottom: 1px solid #454545;
 }
 
-.jot-title {
+.job-title {
     font-size: 110%;
 }
 
@@ -253,12 +251,17 @@
     text-align: left;
     line-height: 1.5em;
     text-rendering: optimizeLegibility;
+    order: 2;
 }
 
 .company {
     width:  100%;
     display: flex;
     justify-content: space-between;
+    order: 0;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 3px;
 }
 
 .company-website {
@@ -267,6 +270,7 @@
 
 .job-dates {
     font-size: 75%;
+    order: 1;
 }
 
 .contact-methods {
@@ -281,6 +285,24 @@
 
     #expanded {
         display: flex;
+    }
+
+    .company {
+        order: 1;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .job-dates {
+        order: 0;
+    }
+
+    .parallax {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 

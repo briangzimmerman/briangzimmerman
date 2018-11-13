@@ -3,6 +3,7 @@ var $slide_in = $('.slide-in');
 var $overlay = $('.overlay');
 var $slide_in_close = $('#close', $slide_in);
 var $title = $('title');
+var $parallax = $('#parallax1');
 var titles = {
     'about_me': 'About Me',
     'contact': 'Contact Me',
@@ -16,6 +17,10 @@ $slide_in_close.click(toggleSlideIn);
 
 var positions = getPositions();
 setCurrentLink();
+
+if(window.innerWidth <= 560) {
+    $parallax.css({height: window.innerHeight});
+}
 
 $(window).resize(function() {
     positions = getPositions();
