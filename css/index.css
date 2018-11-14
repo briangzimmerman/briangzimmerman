@@ -179,7 +179,7 @@
 }
 
 #name {
-    font-size: 200%
+    font-size: 170%
 }
 
 .section {
@@ -344,6 +344,10 @@
         display: flex;
         align-items: center;
         min-height: 100vh;
+    }
+
+    #name {
+        font-size: 200%
     }
 }
 
