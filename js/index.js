@@ -8,6 +8,7 @@ var titles = {
     'about_me': 'About Me',
     'contact': 'Contact Me',
     'resume': 'Experience',
+    'skills': 'Skills',
     'parallax1': 'Brian Zimmerman'
 };
 
