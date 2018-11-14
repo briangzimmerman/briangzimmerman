@@ -113,7 +113,7 @@
 
 .section-link:not(.current):hover {
     color: #d9ecea;
-    border-color: #d9ecea;
+    /* border-color: #d9ecea; */
 }
 
 #parallax1 {
@@ -207,6 +207,8 @@
     max-width: 960px;
     margin-left: auto;
     margin-right: auto;
+
+    width: 100%;
 }
 
 #about_me .section-content {
@@ -336,6 +338,12 @@
 
     .skills {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .section {
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
     }
 }
 
