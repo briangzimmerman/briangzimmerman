@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Lato';
-    src: url('fonts/Lato/Lato-Regular.ttf');
+    src: url('../fonts/Lato/Lato-Regular.ttf');
 }
 
 * {
@@ -119,7 +119,7 @@
 #parallax1 {
     background-image:
         linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
-        url('images/highway.jpg');
+        url('../images/highway.jpg');
     height: 100vh;
     background-size: cover;
     background-position: center;
