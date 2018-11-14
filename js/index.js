@@ -18,6 +18,7 @@ $slide_in_close.click(toggleSlideIn);
 
 if(window.innerWidth <= 560) {
     $parallax.css({height: window.innerHeight});
+    $('.section').css({height: window.innerHeight});
 }
 
 var positions = getPositions();
@@ -71,8 +72,8 @@ function setCurrentLink() {
         var height = $elem.height() + px2num(padding_top) + px2num(padding_bottom);
         var top = positions[id];
 
-        if($(window).scrollTop() >= last_top + (last_height - ($(window).height() / 2))
-            && $(window).scrollTop() < top + (height - ($(window).height() / 2))
+        if($(window).scrollTop() >= last_top + (last_height - ($(window).height() / 3))
+            && $(window).scrollTop() < top + (height - ($(window).height() / 3))
         ) {
             $('.section-link.current, #menu span.current').removeClass('current');
             $('#expanded span[data-target="'+id+'"], .slide-in-link[data-target="'+id+'"]').addClass('current');
