@@ -12,15 +12,18 @@ var titles = {
     'parallax1': 'Brian Zimmerman'
 };
 
+// Open and close side-nav
 $hamburger.click(toggleSlideIn);
 $overlay.click(toggleSlideIn);
 $slide_in_close.click(toggleSlideIn);
 
+// On mobile, don't use vh because it's jarring when scroll direction changes
 if(window.innerWidth <= 560) {
     $parallax.css({height: $(window).height()});
     $('.section').css({'min-height': $(window).height()});
 }
 
+// Get section positions to set current nav section
 var positions = getPositions();
 setCurrentLink();
 
@@ -30,6 +33,7 @@ $(window).resize(function() {
 
 $(window).scroll(setCurrentLink);
 
+// Go to section
 $('.section-link').click(function() {
     var id = $(this).data('target');
     var padding = px2num($('#'+id).css('padding-top'));

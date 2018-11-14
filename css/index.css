@@ -14,6 +14,8 @@
     flex-shrink: 0;
 }
 
+/* ------------------ Hamburger ----------------- */
+
 .hamburger {
     position: fixed;
     top: 10px;
@@ -41,6 +43,8 @@
     cursor: pointer;
 }
 
+/* ----------------------------------------*/
+
 .caption {
     position: absolute;
     left: 0;
@@ -60,6 +64,8 @@
     margin-top: 50px;
 }
 
+/* -------------------- Slide in nav ------------------- */
+
 .slide-in-link {
     margin: 7px 10px;
     padding: 3px 0;
@@ -78,51 +84,6 @@
 
 .slide-in-link.current span {
     border-color: black;
-}
-
-#expanded {
-    position: fixed;
-    z-index: 100;
-    width: 100vw;
-    display: none;
-    /* display: flex; */
-    justify-content: center;
-    background-color: #151F2C;
-    height: 50px;
-    align-items: center;
-    box-shadow: 0 5px 5px -5px #333;
-}
-
-.section-link {
-    text-transform: uppercase;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-    padding: 3px 15px;
-    font-size: 93%;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.2s;
-}
-
-.section-link.current {
-    border-color: white;
-}
-
-.section-link:hover {
-    cursor: pointer;
-}
-
-.section-link:not(.current):hover {
-    color: #d9ecea;
-    /* border-color: #d9ecea; */
-}
-
-#parallax1 {
-    background-image:
-        linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
-        url('../images/highway.jpg');
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
 }
 
 .overlay {
@@ -168,6 +129,55 @@
     cursor: pointer;
 }
 
+/* --------------------- Expanded nav ------------------ */
+
+#expanded {
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+    background-color: #151F2C;
+    height: 50px;
+    align-items: center;
+    box-shadow: 0 5px 5px -5px #333;
+}
+
+.section-link {
+    text-transform: uppercase;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    padding: 3px 15px;
+    font-size: 93%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.section-link.current {
+    border-color: white;
+}
+
+.section-link:hover {
+    cursor: pointer;
+}
+
+.section-link:not(.current):hover {
+    color: #d9ecea;
+    /* border-color: #d9ecea; */
+}
+
+/* --------------------- Main Section --------------------- */
+
+#parallax1 {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
+        url('../images/highway.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
 #title, #name {
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -181,6 +191,8 @@
 #name {
     font-size: 150%
 }
+
+/* --------------------- Content Sections ------------------ */
 
 .section {
     text-align: center;
@@ -211,6 +223,8 @@
     width: 100%;
 }
 
+/* -------------------- About Me ----------------------- */
+
 #about_me .section-content {
     display: flex;
     justify-content: space-between;
@@ -236,6 +250,8 @@
     width: 100%;
     border-radius: 50%;
 }
+
+/* -------------------- Experience -------------------- */
 
 .job {
     display: flex;
@@ -280,10 +296,7 @@
     order: 1;
 }
 
-.contact-methods {
-    display: flex;
-    justify-content: center;
-}
+/* --------------------------- Skills ----------------------------- */
 
 .skills {
     display: grid;
@@ -302,6 +315,15 @@
 .skill span {
     color: #307bbb !important;
 }
+
+/* -------------------------- Contact Me ----------------------- */
+
+.contact-methods {
+    display: flex;
+    justify-content: center;
+}
+
+/* --------------------------------- Media ---------------------------------- */
 
 @media screen and (min-width: 515px) {
     .skills {
@@ -348,6 +370,10 @@
 
     #name {
         font-size: 200%
+    }
+
+    #title {
+        font-size: 115%;
     }
 }
 
