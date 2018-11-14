@@ -17,8 +17,8 @@ $overlay.click(toggleSlideIn);
 $slide_in_close.click(toggleSlideIn);
 
 if(window.innerWidth <= 560) {
-    $parallax.css({height: window.innerHeight});
-    $('.section').css({'min-height': window.innerHeight});
+    $parallax.css({height: $(window).height()});
+    $('.section').css({'min-height': $(window).height()});
 }
 
 var positions = getPositions();
