@@ -194,16 +194,16 @@
 
 /* --------------------- Content Sections ------------------ */
 
-.section {
+section {
     text-align: center;
     padding: 125px 80px;
 }
 
-.section:nth-of-type(odd) {
+section:nth-of-type(odd) {
     background-color: #eeeeee;
 }
 
-.section * {
+section * {
     color: #454545;
 }
 
@@ -362,7 +362,7 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .section {
+    section {
         display: flex;
         align-items: center;
         min-height: 100vh;
@@ -396,7 +396,7 @@
 }
 
 @media screen and (max-width: 600px) {
-    .section {
+    section {
         padding: 50px 30px;
     }
 }

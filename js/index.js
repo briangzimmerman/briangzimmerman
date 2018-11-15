@@ -20,7 +20,7 @@ $slide_in_close.click(toggleSlideIn);
 // On mobile, don't use vh because it's jarring when scroll direction changes
 if(window.innerWidth <= 560) {
     $parallax.css({height: $(window).height()});
-    $('.section').css({'min-height': $(window).height()});
+    $('section').css({'min-height': $(window).height()});
 }
 
 // Get section positions to set current nav section
@@ -57,7 +57,7 @@ function toggleSlideIn() {
 function getPositions() {
     var positions = {};
 
-    $('.section, .parallax').each(function() {
+    $('section, .parallax').each(function() {
         positions[$(this).attr('id')] = $(this).offset().top;
     });
 
