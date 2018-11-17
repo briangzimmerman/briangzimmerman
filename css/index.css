@@ -197,6 +197,9 @@
 section {
     text-align: center;
     padding: 125px 80px;
+
+    display: flex;
+    align-items: center;
 }
 
 section:nth-of-type(odd) {
@@ -363,8 +366,8 @@ section * {
     }
 
     section {
-        display: flex;
-        align-items: center;
+        /* display: flex;
+        align-items: center; */
         min-height: 100vh;
     }
 
