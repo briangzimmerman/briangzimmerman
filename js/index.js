@@ -1,20 +1,16 @@
-var $hamburger = $('.hamburger');
 var $slide_in = $('.slide-in');
 var $overlay = $('.overlay');
-var $slide_in_close = $('#close', $slide_in);
 var $title = $('title');
-var $parallax = $('#parallax1');
-var $expanded = $('#expanded');
 var $sections = $('section, #parallax1');
 
 // Open and close side-nav
-$hamburger.click(toggleSlideIn);
+$('.hamburger').click(toggleSlideIn);
 $overlay.click(toggleSlideIn);
-$slide_in_close.click(toggleSlideIn);
+$('#close', $slide_in).click(toggleSlideIn);
 
 // On mobile, don't use vh because it's jarring when scroll direction changes
 if(window.innerWidth <= 560) {
-    $parallax.css({height: window.outerHeight});
+    $('parallax1').css({height: window.outerHeight});
     $('section').css({'min-height': screen.availHeight});
 }
 
