@@ -231,7 +231,6 @@ section * {
 #about_me .section-content {
     display: flex;
     justify-content: space-between;
-    /* flex-direction: column; */
 }
 
 #about_me #text-about {
@@ -366,9 +365,7 @@ section * {
     }
 
     section {
-        /* display: flex;
-        align-items: center; */
-        min-height: 100vh;
+        min-height: calc(100vh - 50px);
     }
 
     #name {

@@ -4,13 +4,8 @@ var $overlay = $('.overlay');
 var $slide_in_close = $('#close', $slide_in);
 var $title = $('title');
 var $parallax = $('#parallax1');
-var titles = {
-    'about_me': 'About Me',
-    'contact': 'Contact Me',
-    'resume': 'Experience',
-    'skills': 'Skills',
-    'parallax1': 'Brian Zimmerman'
-};
+var $expanded = $('#expanded');
+var $sections = $('section, #parallax1');
 
 // Open and close side-nav
 $hamburger.click(toggleSlideIn);
@@ -23,26 +18,18 @@ if(window.innerWidth <= 560) {
     $('section').css({'min-height': screen.availHeight});
 }
 
-// Get section positions to set current nav section
-var positions = getPositions();
 setCurrentLink();
-
-$(window).resize(function() {
-    positions = getPositions();
-});
 
 $(window).scroll(setCurrentLink);
 
 // Go to section
 $('.section-link').click(function() {
-    var id = $(this).data('target');
-    $('html, body').animate({scrollTop: (positions[id])+'px'});
+    scrollTo($(this).data('target'), 50);
 });
 
 $('.slide-in-link').click(function() {
     toggleSlideIn();
-    var id = $(this).data('target');
-    $('html, body').animate({scrollTop: (positions[id])+'px'});
+    scrollTo($(this).data('target'));
 });
 
 //--------------------------------- Functions ----------------------------------
@@ -52,37 +39,26 @@ function toggleSlideIn() {
     $overlay.toggleClass('show')
 }
 
-function getPositions() {
-    var positions = {};
-
-    $('section, .parallax').each(function() {
-        positions[$(this).attr('id')] = $(this).offset().top;
-    });
-
-    return positions;
-}
-
 function setCurrentLink() {
     var last_top = 0;
     var last_height = 0;
 
-
-    Object.keys(positions).forEach(function(id) {
-        var $elem = $('#'+id);
-        var padding_top = $elem.css('padding-top');
-        var padding_bottom = $elem.css('padding-bottom');
-        var height = $elem.height() + px2num(padding_top) + px2num(padding_bottom);
-        var top = positions[id];
+    $sections.each(function() {
+        var id = $(this).attr('id');
+        var padding_top = $(this).css('padding-top');
+        var padding_bottom = $(this).css('padding-bottom');
+        var height = $(this).height() + px2num(padding_top) + px2num(padding_bottom);
+        var top = $(this).offset().top;
 
         if($(window).scrollTop() >= last_top + (last_height - ($(window).height() / 3))
             && $(window).scrollTop() < top + (height - ($(window).height() / 3))
         ) {
             $('.section-link.current, #menu span.current').removeClass('current');
             $('#expanded span[data-target="'+id+'"], .slide-in-link[data-target="'+id+'"]').addClass('current');
-            $title.text(titles[id]);
+            $title.text($(this).data('title'));
         }
 
-        last_top = positions[id];
+        last_top = top;
         last_height = height;
     });
 }
@@ -90,4 +66,12 @@ function setCurrentLink() {
 function px2num(pixels) {
     var num = pixels.substr(0, pixels.length - 2);
     return num * 1;
+}
+
+function scrollTo(id, nav_height) {
+    nav_height = nav_height || 0;
+
+    var scroll = $('#'+id).offset().top;
+
+    $('html, body').animate({scrollTop: (scroll - nav_height) + 'px'});
 }
